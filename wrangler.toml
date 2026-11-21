@@ -1,0 +1,8 @@
+name = "around-the-world-80-days"
+main = "worker.js"
+compatibility_date = "2026-11-22"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "around-the-world-80-days"
+database_id = "f1ecc64b-51cb-49dc-b00f-6550ad7bc9eb"
