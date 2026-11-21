@@ -1,6 +1,6 @@
 name = "around-the-world-80-days"
 main = "worker.js"
-compatibility_date = "2026-11-22"
+compatibility_date = "2025-11-22"
 
 [[d1_databases]]
 binding = "DB"
