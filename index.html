@@ -15,6 +15,59 @@ button,input{font:inherit}button{cursor:pointer}.shell{max-width:1500px;margin:a
 .lobby{background:#f4ead0;border-radius:13px;padding:14px;margin-top:12px}.field{width:100%;border:1px solid #c9b78d;border-radius:8px;padding:10px;background:#fff9e9;margin:6px 0 9px;font-size:12px;color:#25352e}.row{display:flex;gap:6px}.row>*{min-width:0;flex:1}.roomcode{font:800 21px monospace;letter-spacing:5px;color:#28574b}.hint{font-size:10px;color:#7a806f;line-height:1.45}.status{font-size:11px;color:#f1d18a;min-height:17px;margin:10px 4px 0;font-weight:700}.hidden{display:none!important}.bottom{display:flex;justify-content:space-between;gap:12px;color:#a7b9aa;font-size:10px;padding:13px 5px 0}.dice{width:35px;height:35px;background:#fff4da;border:1px solid #bda77b;border-radius:8px;display:grid;place-items:center;font:800 22px 'Playfair Display',serif;color:#38564a}.diebox{display:flex;align-items:center;gap:8px}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#f3e7c9;color:#263c32;padding:11px 16px;border-radius:12px;box-shadow:var(--shadow);font-size:12px;font-weight:800;z-index:20;max-width:90vw}
 @media(max-width:900px){.gamegrid{grid-template-columns:1fr}.side{display:grid;grid-template-columns:1fr 1fr}.side .wide{grid-column:1/-1}.hero{display:block}.hero p{margin-top:10px}.table{padding:10px;border-width:7px}}
 @media(max-width:560px){.shell{padding:13px 9px 25px}.mast{align-items:flex-start;flex-direction:column}.hero h1{font-size:37px}.side{display:flex}.map-scroll{overflow-x:auto}.world{min-width:580px}.stop{width:29px;height:29px}.stop small{font-size:8px}.tabletop b{font-size:16px}.tabletop span{font-size:8px}}
+
+/* tabletop art direction refresh */
+:root{--felt:#173f38;--paper:#f1e5c6;--gold:#d9b36a}
+body{background-color:#101f1d;background-image:radial-gradient(#d7b77b12 1px,transparent 1px),linear-gradient(135deg,#132522,#1a302b);background-size:7px 7px,auto}
+.shell{max-width:1600px;padding-top:25px}
+.brand{font-size:10px;letter-spacing:4px}
+.hero{margin:25px 0 22px;align-items:center}
+.hero h1{font-size:clamp(42px,5.4vw,68px);text-shadow:0 3px 0 #0002}
+.hero p{font-family:'Playfair Display',serif;font-style:italic;font-size:15px;max-width:410px;color:#c6d2c6}
+.table{border-width:14px;border-color:#704326;border-radius:30px;padding:20px;background:linear-gradient(135deg,#2b5b4d,#174137 48%,#10352f);box-shadow:inset 0 0 0 2px #d7b276,inset 0 0 0 5px #593b26,0 28px 70px #0009}
+.table:before{inset:8px;border:1px solid #e8c98b55;border-radius:17px}
+.tabletop{padding:2px 8px 16px}
+.tabletop b{font-size:22px;letter-spacing:.2px}
+.tabletop span{border:1px solid #d8c18b66;border-radius:30px;padding:7px 12px;background:#0b292544}
+.gamegrid{grid-template-columns:minmax(0,2fr) minmax(300px,.82fr);gap:17px}
+.mapframe{padding:14px;border-radius:17px;background:linear-gradient(145deg,#f6edda,#e4d4b0);box-shadow:0 7px 16px #081a1740,inset 0 0 0 1px #bca77c}
+.maphead{font-size:10px;padding:3px 8px 12px;letter-spacing:1.6px}
+.map-scroll{border:1px solid #9c8b63;box-shadow:inset 0 0 25px #806e4d22}
+.world{filter:sepia(.08) saturate(.82)}
+.stop{width:35px;height:35px;border:2px solid #77572e;background:linear-gradient(145deg,#fff7dd,#ddc99d);font-size:14px;box-shadow:0 3px 7px #26352a66, inset 0 1px #fff}
+.stop small{top:35px;padding:3px 6px;border:1px solid #c9b98f;background:#f8efd9f2;box-shadow:0 2px 4px #4a463422;font:800 9px 'DM Sans',sans-serif}
+.stop.here{background:radial-gradient(circle at 35% 25%,#ffe8a3,#d6a449);border:3px solid #fff3d4;box-shadow:0 0 0 4px #c38d3d66,0 4px 9px #26352a77}
+.pawn{font-size:25px;filter:drop-shadow(1px 3px 1px #1c2c27aa)}
+.maplegend{padding:12px 8px 2px;font-size:10px}
+.side{gap:13px}
+.woodcard{border-radius:15px;padding:15px;background:linear-gradient(145deg,#fbf2df,#e5d3ae);box-shadow:0 6px 14px #071c1738,inset 0 1px #fff9e9;border:1px solid #c9b487}
+.cardtitle{font-size:18px;margin-bottom:12px}
+.cash{font-size:31px}
+.coin{width:34px;height:34px;box-shadow:0 2px 3px #4c351d55,inset 0 1px #fff6c9}
+.stat{background:linear-gradient(145deg,#f1e8d2,#e1d3b3);border:1px solid #d5c49e}
+.stat b{font-size:22px}
+.player{padding:8px;background:#eee4cc;border:1px solid #e0d2b2}
+.player.current{background:#f9edca;border-color:#bd914c;box-shadow:inset 3px 0 #b98537}
+.avatar{width:34px;height:34px;background:linear-gradient(145deg,#e6ead8,#c5d0b8);font-size:19px}
+.ticket{padding:10px 5px;background:linear-gradient(145deg,#fff9e9,#eee0bd);box-shadow:0 2px 4px #5b4a2a18}
+.ticket .ti{font-size:24px}
+.ticket b{font-size:11px}
+.ticket.selected{outline:2px solid #a87835;box-shadow:0 0 0 4px #c89b4a26;background:linear-gradient(145deg,#fff2cc,#e8d19d)}
+.btn{font-size:12px;padding:12px 14px;letter-spacing:.2px;transition:transform .15s,filter .15s}
+.btn:not(:disabled):hover{filter:brightness(1.08);transform:translateY(-1px)}
+.eventcard{background:linear-gradient(135deg,#fff7e4,#e8d3a6);border:1px solid #b99a64;box-shadow:inset 0 0 0 4px #fff9e855,0 3px 7px #5b472322}
+.eventcard h3{font-size:19px}
+.eventcard p{font-size:11px}
+.log{max-height:145px}
+.logline{font-size:11px;padding:4px 0 7px}
+.lobby,.woodcard#room{background:linear-gradient(145deg,#fbf1d9,#e7d6b1)}
+.field{background:#fffaf0;border-color:#c5b184}
+.roomcode{font-size:25px;letter-spacing:7px}
+.status{font-size:12px;color:#f4d99b}
+.bottom{font-size:9px;letter-spacing:.7px}
+@media(max-width:900px){.gamegrid{grid-template-columns:1fr}.side{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.table{padding:10px;border-width:8px}.hero h1{font-size:42px}.hero p{font-size:13px}.tabletop b{font-size:17px}.mapframe{padding:9px}}
+
 </style></head><body><main class="shell">
 <header class="mast"><div class="brand">THE GRAND TOUR · 1872</div><div class="mast-right"><span class="tag">НАСТОЛЬНОЕ ПРИКЛЮЧЕНИЕ</span><span class="tag">2–6 ПУТЕШЕСТВЕННИКОВ</span></div></header>
 <section class="hero"><h1>Вокруг света<br>за 80 дней.</h1><p>Собери вещи, купи билет и отправляйся в большое путешествие. Пересекай континенты, открывай события, береги монеты и возвращайся в Лондон раньше соперников.</p></section>
@@ -43,19 +96,19 @@ button,input{font:inherit}button{cursor:pointer}.shell{max-width:1500px;margin:a
 <section class="woodcard wide hidden" id="room"><div class="cardtitle"><span>Твоя игровая комната</span><span class="eyebrow">ПРИГЛАСИ ДРУЗЕЙ</span></div><div class="roomcode" id="code">------</div><div class="hint">Отправь этот код другим игрокам, чтобы они заняли места за столом.</div><div class="actions"><button class="btn light" id="copy">Скопировать код</button></div></section>
 </aside></div><div class="bottom"><span>НЕОФИЦИАЛЬНЫЙ ИГРОВОЙ ПРОТОТИП ПО МОТИВАМ ПРИКЛЮЧЕНЧЕСКОГО РОМАНА</span><span>ЛОНДОН · 1872</span></div></section></main><div id="toast" class="toast hidden"></div>
 <script>
-const cities=[{n:'Лондон',e:'🇬🇧',x:48.5,y:25},{n:'Париж',e:'🇫🇷',x:43,y:31},{n:'Турин',e:'🇮🇹',x:39,y:41},{n:'Каир',e:'🇪🇬',x:50,y:51},{n:'Мумбаи',e:'🇮🇳',x:62,y:49},{n:'Калькутта',e:'🇮🇳',x:68,y:42},{n:'Сингапур',e:'🇸🇬',x:75,y:62},{n:'Гонконг',e:'🇭🇰',x:80,y:37},{n:'Йокогама',e:'🇯🇵',x:87,y:32},{n:'Сан-Франциско',e:'🇺🇸',x:17,y:38},{n:'Нью-Йорк',e:'🇺🇸',x:27,y:26},{n:'Лондон',e:'🏁',x:48.5,y:25}];
+const cities=[{n:'Лондон',e:'🇬🇧',x:48.5,y:25},{n:'Париж',e:'🇫🇷',x:44,y:29},{n:'Турин',e:'🇮🇹',x:45,y:37},{n:'Каир',e:'🇪🇬',x:52,y:49},{n:'Мумбаи',e:'🇮🇳',x:63,y:49},{n:'Калькутта',e:'🇮🇳',x:69,y:43},{n:'Сингапур',e:'🇸🇬',x:75,y:61},{n:'Гонконг',e:'🇭🇰',x:80,y:38},{n:'Йокогама',e:'🇯🇵',x:87,y:31},{n:'Сан-Франциско',e:'🇺🇸',x:17,y:39},{n:'Нью-Йорк',e:'🇺🇸',x:27,y:27},{n:'Финиш',e:'🏁',x:48.5,y:25}];
 const avatars=['🎩','🧭','🧳','🚂','🗺️','🌍'];let room='',player='',state=null,mode='train',poll=null,toastTimer;
 const $=id=>document.getElementById(id);
 function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function notify(s){$('toast').textContent=s;$('toast').classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.add('hidden'),2600)}
-function mapDraw(){ $('stops').innerHTML=cities.map((c,i)=>'<div class="stop" data-i="'+i+'" style="left:'+c.x+'%;top:'+c.y+'%">'+(i===0?'🏁':c.e)+'<small>'+c.n+'</small></div>').join('');}
+function mapDraw(){ $('stops').innerHTML=cities.map((c,i)=>'<div class="stop" data-i="'+i+'" style="left:'+c.x+'%;top:'+c.y+'%">'+(i===0?'🇬🇧':(i===11?'🏁':c.e))+'<small>'+c.n+'</small></div>').join('');}
 function draw(){
  if(!state)return;
  const me=state.players.find(p=>p.id===player);const current=state.players.find(p=>p.id===state.current_turn);
  $('cash').textContent=me?'£'+me.money:'—';$('days').textContent=me?me.days_used+' / 80':'0 / 80';$('die').textContent=state.last_die||'—';$('playerCount').textContent=state.players.length+' / 6';$('roomLabel').textContent='КОМНАТА '+room;$('phase').textContent=state.status==='finished'?'ПАРТИЯ ЗАВЕРШЕНА':'ХОД: '+(current?current.display_name:'ОЖИДАНИЕ');
  $('players').innerHTML=state.players.map((p,i)=>'<div class="player '+(p.id===state.current_turn?'current':'')+'"><div class="avatar">'+avatars[i%avatars.length]+'</div><div><div class="pname">'+esc(p.display_name)+(p.id===player?' · ты':'')+'</div><div class="pmeta">'+esc(p.position_city)+' · '+p.days_used+' дней</div></div><div class="pwallet">£'+p.money+'</div></div>').join('');
  document.querySelectorAll('.stop').forEach(el=>{let i=+el.dataset.i;let occupied=state.players.some(p=>cities.findIndex(c=>c.n===p.position_city)===i);el.classList.toggle('here',occupied);el.classList.toggle('done',state.players.some(p=>cities.findIndex(c=>c.n===p.position_city)>i))});
- $('pawns').innerHTML=state.players.map((p,i)=>{let idx=Math.max(0,cities.findIndex(c=>c.n===p.position_city));let c=cities[idx];let offset=i%3;return '<div class="pawn" title="'+esc(p.display_name)+'" style="left:calc('+c.x+'% + '+(offset*12-12)+'px);top:calc('+c.y+'% - '+(Math.floor(i/3)*15+13)+'px)">'+avatars[i%avatars.length]+'</div>'}).join('');
+ $('pawns').innerHTML=state.players.map((p,i)=>{let idx=Math.max(0,cities.findIndex(c=>c.n===p.position_city));let c=cities[idx]||cities[0];let offset=i%3;return '<div class="pawn" title="'+esc(p.display_name)+'" style="left:calc('+c.x+'% + '+(offset*12-12)+'px);top:calc('+c.y+'% - '+(Math.floor(i/3)*15+13)+'px)">'+avatars[i%avatars.length]+'</div>'}).join('');
  $('travel').disabled=!me||state.current_turn!==player||state.status==='finished';$('travel').textContent=state.status==='finished'?'Партия завершена':'Бросить кубик и отправиться';
  $('log').innerHTML=(state.log||[]).slice().reverse().map(x=>'<div class="logline">'+esc(x)+'</div>').join('')||'<div class="hint">Первое событие появится после хода.</div>';
  if(state.last_event){$('eventCard').innerHTML='<div class="etype">КАРТА СОБЫТИЯ</div><h3>'+esc(state.last_event.title)+'</h3><p>'+esc(state.last_event.text)+'</p>'}
