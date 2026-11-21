@@ -19,7 +19,7 @@ button,input{font:inherit}button{cursor:pointer}.shell{max-width:1500px;margin:a
 <header class="mast"><div class="brand">THE GRAND TOUR · 1872</div><div class="mast-right"><span class="tag">НАСТОЛЬНОЕ ПРИКЛЮЧЕНИЕ</span><span class="tag">2–6 ПУТЕШЕСТВЕННИКОВ</span></div></header>
 <section class="hero"><h1>Вокруг света<br>за 80 дней.</h1><p>Собери вещи, купи билет и отправляйся в большое путешествие. Пересекай континенты, открывай события, береги монеты и возвращайся в Лондон раньше соперников.</p></section>
 <section class="table"><div class="tabletop"><b>Игровой стол Филеаса Фогга</b><span id="phase">ПОДГОТОВКА К ПУТЕШЕСТВИЮ</span></div>
-<div class="gamegrid"><section class="mapframe"><div class="maphead"><span>КАРТА МАРШРУТА · 11 ОСТАНОВОК</span><span id="roomLabel">СВОБОДНАЯ ПАРТИЯ</span></div>
+<div class="gamegrid"><section class="mapframe"><div class="maphead"><span>КАРТА МАРШРУТА · 12 ОСТАНОВОК</span><span id="roomLabel">СВОБОДНАЯ ПАРТИЯ</span></div>
 <div class="map-scroll"><svg class="world" viewBox="0 0 1000 500" role="img" aria-label="Стилизованная карта мира с маршрутом путешествия">
 <rect width="1000" height="500" fill="#d8d0b0"/><path class="waterline" d="M0 100 Q220 60 420 105 T1000 85 M0 385 Q260 420 500 380 T1000 405 M100 0 Q140 250 95 500 M850 0 Q820 240 880 500"/>
 <path class="land" d="M65 95 L120 55 195 70 230 115 210 160 245 190 220 245 165 235 135 200 90 190 55 145Z M255 250 L305 260 330 315 315 390 280 450 255 395 235 330Z M430 90 L485 65 555 75 585 115 565 160 520 170 490 145 450 155 420 125Z M490 180 L560 175 610 210 595 260 555 285 525 260 500 225Z M620 95 L690 70 770 85 820 130 800 185 735 205 690 175 645 170Z M760 260 L835 245 900 285 880 350 820 365 770 330Z M910 400 L940 390 955 420 930 445Z"/>
@@ -48,7 +48,7 @@ const avatars=['🎩','🧭','🧳','🚂','🗺️','🌍'];let room='',player=
 const $=id=>document.getElementById(id);
 function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function notify(s){$('toast').textContent=s;$('toast').classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.add('hidden'),2600)}
-function mapDraw(){ $('stops').innerHTML=cities.slice(0,11).map((c,i)=>'<div class="stop" data-i="'+i+'" style="left:'+c.x+'%;top:'+c.y+'%">'+(i===0?'🏁':c.e)+'<small>'+c.n+'</small></div>').join('');}
+function mapDraw(){ $('stops').innerHTML=cities.map((c,i)=>'<div class="stop" data-i="'+i+'" style="left:'+c.x+'%;top:'+c.y+'%">'+(i===0?'🏁':c.e)+'<small>'+c.n+'</small></div>').join('');}
 function draw(){
  if(!state)return;
  const me=state.players.find(p=>p.id===player);const current=state.players.find(p=>p.id===state.current_turn);
